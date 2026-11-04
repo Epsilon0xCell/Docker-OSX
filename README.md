@@ -1,3 +1,13 @@
+<p align="center"><img src="banner.png" width="800" alt="Docker-OSX banner"></p>
+
+<p align="center"><img src="logo.png" width="200" alt="Docker-OSX logo"></p>
+
+<img src="assets-scene.svg" alt="The Container Orchard: a shipping container housing a tree whose fruit are screens" width="100%">
+
+*Theme: The Container Orchard. Vintage scientific illustration on parchment, ink green with one apple red accent: a whole Mac, drawn as an orchard tree, growing inside a shipping container.*
+
+<p align="center"><img src="sep-heavy.svg" alt=""></p>
+
 # Docker-OSX · [Follow @sickcodes on Twitter](https://twitter.com/sickcodes)
 
 ![Running Mac OS X in a Docker container](/running-mac-inside-docker-qemu.png?raw=true "OSX KVM DOCKER")

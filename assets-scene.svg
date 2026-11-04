@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="190" viewBox="0 0 800 190" role="img" aria-label="The Container Orchard: a shipping container housing a small tree whose fruit are screens and whose roots are cables">
+<rect width="800" height="190" fill="#f3e9d2"/><rect x="6" y="6" width="788" height="178" fill="none" stroke="#2f5d3a" stroke-width="2"/><rect x="12" y="12" width="776" height="166" fill="none" stroke="#2f5d3a" stroke-width="0.8"/>
+<g stroke="#2f5d3a" stroke-width="2.5" fill="none"><rect x="90" y="52" width="430" height="96"/><path d="M118 52 v96 M146 52 v96 M174 52 v96 M202 52 v96 M230 52 v96 M258 52 v96 M286 52 v96 M314 52 v96 M342 52 v96 M370 52 v96 M398 52 v96 M426 52 v96 M454 52 v96 M482 52 v96" stroke-width="1" opacity="0.55"/></g>
+<path d="M305 148 C300 118 292 104 268 88 M305 148 C308 116 318 100 344 84 M305 148 C304 124 304 108 305 78" fill="none" stroke="#2f5d3a" stroke-width="4" stroke-linecap="round"/>
+<g><animate attributeName="opacity" values="1;0.55;1" dur="2.8s" repeatCount="indefinite"/><rect x="252" y="66" width="30" height="22" rx="3" fill="#c0392b"/></g>
+<rect x="330" y="60" width="30" height="22" rx="3" fill="#2f5d3a"/><rect x="292" y="48" width="28" height="21" rx="3" fill="#c0392b" opacity="0.85"/>
+<path d="M290 148 C270 162 250 164 228 170 M318 148 C338 162 360 164 384 170 M305 148 C305 160 302 168 298 176" fill="none" stroke="#2f5d3a" stroke-width="2.5"/><circle cx="228" cy="172" r="4" fill="#c0392b"/><circle cx="384" cy="172" r="4" fill="#2f5d3a"/><circle cx="298" cy="178" r="4" fill="#c0392b"/>
+<g font-family="Georgia,serif" fill="#2f5d3a"><text x="560" y="82" font-size="15" font-style="italic">Fig. 1</text><text x="560" y="106" font-size="12">Container, cut away</text><text x="560" y="126" font-size="12">Orchard within</text><text x="560" y="146" font-size="12">Roots as cables</text></g>
+<line x1="545" y1="70" x2="545" y2="155" stroke="#2f5d3a" stroke-width="1"/>
+</svg>

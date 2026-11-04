@@ -8,6 +8,33 @@
 
 <p align="center"><img src="sep-heavy.svg" alt=""></p>
 
+<p align="center">
+<a href="https://hub.docker.com/r/sickcodes/docker-osx"><img src="https://img.shields.io/docker/pulls/sickcodes/docker-osx" alt="Docker Pulls"></a>
+<a href="https://hub.docker.com/r/sickcodes/docker-osx"><img src="https://img.shields.io/docker/image-size/sickcodes/docker-osx/latest" alt="Docker Image Size"></a>
+<a href="https://github.com/Epsilon0xCell/Docker-OSX"><img src="https://img.shields.io/github/stars/Epsilon0xCell/Docker-OSX" alt="GitHub Stars"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a>
+<a href="https://discord.gg/sickchat"><img src="https://img.shields.io/badge/Discord-sickchat-5865F2" alt="Discord"></a>
+</p>
+
+## Contents
+
+New here? Start with [Quick Start Docker-OSX](#quick-start-docker-osx).
+
+- [Author](#author)
+- [Quick Start Docker-OSX](#quick-start-docker-osx)
+- [Technical details](#technical-details)
+- [Capabilities](#capabilities)
+- [Docker](#docker)
+- [Kubernetes](#kubernetes)
+- [Support](#support)
+- [License/Contributing](#licensecontributing)
+- [Disclaimer](#disclaimer)
+- [Instructions](#instructions)
+- [Initial setup](#initial-setup)
+- [Troubleshooting](#troubleshooting)
+- [More Questions and Answers](#more-questions-and-answers)
+
+
 # Docker-OSX · [Follow @sickcodes on Twitter](https://twitter.com/sickcodes)
 
 ![Running Mac OS X in a Docker container](/running-mac-inside-docker-qemu.png?raw=true "OSX KVM DOCKER")

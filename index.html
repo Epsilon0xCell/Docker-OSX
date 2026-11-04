@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docker-OSX: a Mac, observed inside a container</title>
+<meta name="description" content="Docker-OSX by sickcodes, presented as a vintage scientific plate: macOS running inside a Docker container, with X11 forwarding and iPhone USB passthrough.">
+<style>
+@font-face{font-family:'Cormorant';src:url('fonts/Cormorant-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Cormorant';src:url('fonts/Cormorant-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'EB Garamond';src:url('fonts/EBGaramond-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'EB Garamond';src:url('fonts/EBGaramond-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{--parchment:#f3e9d2;--parchment2:#ecdfc2;--inkgreen:#234434;--ink:#2a2419;--apple:#b0322c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#e7dcc0;color:var(--ink);font-family:'EB Garamond',serif;line-height:1.65;font-size:1.08rem}
+.plate{max-width:880px;margin:28px auto 40px;background:var(--parchment);border:2px solid var(--inkgreen);outline:6px double var(--inkgreen);outline-offset:-14px;padding:56px 58px 48px;box-shadow:0 6px 30px rgba(42,36,25,.25)}
+h1,h2{font-family:'Cormorant',serif;color:var(--inkgreen);line-height:1.05}
+h1{font-size:3.6rem;text-align:center;font-weight:700}
+h2{font-size:2rem;font-weight:700}
+.fig{text-align:center;font-variant:small-caps;letter-spacing:.18em;color:var(--apple);font-size:.85rem;margin-bottom:8px}
+.sub{text-align:center;font-style:italic;max-width:56ch;margin:14px auto 0}
+.center{text-align:center}
+.heroimg{width:100%;display:block;border:1px solid var(--inkgreen)}
+.logorow{display:flex;justify-content:center;margin:22px 0 4px}
+.logorow img{width:120px;height:120px;object-fit:contain}
+figure{margin:26px 0}
+figcaption{font-size:.92rem;font-style:italic;text-align:center;margin-top:8px;color:#4c4433}
+.hatch{height:14px;margin:38px 0 0;background:repeating-linear-gradient(-45deg,var(--inkgreen) 0 2px,transparent 2px 9px);opacity:.75}
+.plateno{font-variant:small-caps;letter-spacing:.2em;color:var(--apple);font-size:.85rem;margin-top:30px}
+section p{margin-top:10px;max-width:66ch}
+table{border-collapse:collapse;width:100%;margin-top:14px}
+th,td{border-top:1px solid var(--inkgreen);border-bottom:1px solid var(--inkgreen);padding:.45rem .7rem;text-align:left}
+th{font-family:'Cormorant',serif;font-size:1.15rem;color:var(--inkgreen)}
+ul{margin:12px 0 0 22px}li{margin-bottom:7px;max-width:64ch}
+.specimen{background:var(--parchment2);border:1px solid var(--inkgreen);padding:18px 22px;margin-top:14px}
+pre{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.86rem;white-space:pre;overflow-x:auto;line-height:1.5}
+.btn{display:inline-block;font-family:'Cormorant',serif;font-weight:700;font-size:1.15rem;color:var(--inkgreen);border:1.5px solid var(--inkgreen);padding:.35em 1.1em;text-decoration:none;margin:.4em .25em 0;background:transparent}
+.btn:hover{background:var(--inkgreen);color:var(--parchment)}
+a{color:var(--apple)}
+footer{margin-top:44px;border-top:3px double var(--inkgreen);padding-top:18px;font-size:.95rem}
+footer p{margin-bottom:8px}
+@media(max-width:700px){.plate{padding:38px 22px}h1{font-size:2.5rem}}
+</style>
+</head>
+<body>
+<div class="plate">
+<header>
+<p class="fig">Fig. I &nbsp;·&nbsp; The container, opened</p>
+<img class="heroimg" src="assets/banner.png" alt="A shipping container cut open to show a small orchard tree computer inside, drawn as a vintage scientific plate">
+<div class="logorow"><img src="assets/logo.png" alt="Docker-OSX logo: a shipping container with a red apple screen inside its open door"></div>
+<h1>Docker-OSX</h1>
+<p class="sub">Run Mac OS X in Docker, with near-native performance. A field plate of the project by Sick.Codes, kept in my fleet.</p>
+<p class="center" style="margin-top:16px"><a class="btn" href="https://github.com/Epsilon0xCell/Docker-OSX">The repository</a><a class="btn" href="#specimen">The specimen command</a><a class="btn" href="#catalogue">Catalogue of releases</a></p>
+<p style="margin-top:20px">The README states the whole observation in one line: run Mac OS X in Docker with near-native performance, X11 forwarding, iMessage security research, and iPhone USB working, macOS in a Docker container. It also names the second use plainly: conduct security research on macOS using both Linux and Windows. I keep this fork in my fleet for exactly that second use, and I built this page from the repository itself.</p>
+</header>
+
+<div class="hatch" aria-hidden="true"></div>
+<section>
+<p class="plateno">Plate I · The specimen</p>
+<h2>What is under the glass</h2>
+<p>Docker-OSX packages a macOS virtual machine, running on QEMU and KVM, inside a Docker container. The project is maintained by Sick.Codes, and the README gives credit where the structure rests: OSX-KVM by kholia upstream, the KVM-OpenCore fork, and the OpenCore bootloader from the Acidanthera team.</p>
+<figure><img class="heroimg" src="assets/intro.png" alt="Docker-OSX introductory artwork: a container orchard in vintage scientific illustration style"><figcaption>Introductory artwork for this fork. The README leaves this picture undisplayed; this site is a new surface, so I show it here as a secondary plate, after the banner.</figcaption></figure>
+</section>
+
+<div class="hatch" aria-hidden="true"></div>
+<section id="catalogue">
+<p class="plateno">Plate II · Catalogue</p>
+<h2>Releases in the collection</h2>
+<p>The quick start offers one Docker image, sickcodes/docker-osx:latest, told apart by the SHORTNAME setting. The releases named in the README:</p>
+<table>
+<tr><th>Release</th><th>Version</th><th>SHORTNAME</th></tr>
+<tr><td>Catalina</td><td>10.15</td><td>catalina</td></tr>
+<tr><td>Big Sur</td><td>11</td><td>big-sur</td></tr>
+<tr><td>Monterey</td><td>12</td><td>monterey</td></tr>
+<tr><td>Ventura</td><td>13</td><td>ventura</td></tr>
+<tr><td>Sonoma</td><td>14</td><td>sonoma</td></tr>
+<tr><td>Sequoia</td><td>15</td><td>sequoia</td></tr>
+</table>
+</section>
+
+<div class="hatch" aria-hidden="true"></div>
+<section id="specimen">
+<p class="plateno">Plate III · Method</p>
+<h2>The specimen command</h2>
+<p>For Catalina, the quick start in the README reads, in full:</p>
+<div class="specimen"><pre>docker run -it \
+    --device /dev/kvm \
+    -p 50922:10022 \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e "DISPLAY=${DISPLAY:-:0.0}" \
+    -e SHORTNAME=catalina \
+    sickcodes/docker-osx:latest</pre></div>
+<p>Field requirements, from the same README: 20GB or more of disk space for a bare minimum installation, 50GB if using Xcode; virtualization enabled in the BIOS settings; and an x86_64 KVM-capable host.</p>
+</section>
+
+<div class="hatch" aria-hidden="true"></div>
+<section>
+<p class="plateno">Plate IV · Capabilities</p>
+<h2>Observed capabilities</h2>
+<ul>
+<li>iPhone on OSX KVM on Linux using usbfluxd, plus USB passthrough with hotplug</li>
+<li>SSH enabled on localhost:50922, and VNC enabled on localhost:8888 in the vnc version</li>
+<li>X11 forwarding enabled, with Xvfb headless mode and custom images supported</li>
+<li>iMessage security research via the serial number generator in the repo</li>
+<li>Folder sharing, and a container you can clone with docker commit</li>
+<li>Kubernetes support, with the Helm chart and its documentation under the helm folder of the repo</li>
+</ul>
+</section>
+
+<footer>
+<p><a href="https://github.com/Epsilon0xCell/Docker-OSX">github.com/Epsilon0xCell/Docker-OSX</a> &nbsp;·&nbsp; Upstream: <a href="https://github.com/sickcodes/Docker-OSX">sickcodes/Docker-OSX</a></p>
+<p>Docker-OSX is an upstream project by sickcodes, held in my fleet as a fork. Upstream files are untouched; this website folder and the gh-pages branch are my own addition to the fork. Licence: GNU General Public License v3 or later (GPL v3+), verified against the LICENSE file in this repo, which carries the GPL Version 3 text.</p>
+<p>Colophon: this plate is set in Cormorant (headings) and EB Garamond (body), both SIL Open Font License 1.1, self-hosted in the site fonts folder with their licence texts. No external fonts or scripts are loaded.</p>
+<p>By Gavin Blacklock.</p>
+</footer>
+</div>
+</body>
+</html>
